@@ -1,101 +1,107 @@
-import Image from "next/image";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { MdMarkEmailUnread } from "react-icons/md";
+import { FaFacebookSquare } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div
+        className="bg-cover bg-center h-screen"
+        style={{ backgroundImage: "url('/bg-home.jpeg')" }}
+      >
+        <div className="div-intro">
+          <div className="puff-in-center">
+          <p>
+            Hey There,
+            <br />
+            I'm ERSA <b>RANI</b>!
+          </p>
+          <p className="over-view" >
+            I'm Creative UI/UX Designer
+            <br /> From Pakistan...
+          </p>
+          <p>
+            <Link href="/contact-page" target="_blank">
+              <button className="hire-me">HIRE ME!</button>
+            </Link>
+          </p>
+          <img
+            src="profile.jpeg"
+            alt="profile picture"
+            className="profile-pic"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          />
+        </div>
+        </div>
+      <Footer />
+    </div>
+  );
+}
+export function Footer() {
+  return (
+    <div>
+      <div
+        className="bg-cover bg-center h-screen"
+        style={{ backgroundImage: "url('/bg-footer.jpeg')" }}
+      >
+        <div className="footer" color="white">
+          <ul className="index">
+            <li>INFORMATION</li>
+            <li>CONTACT</li>
+            <li>SOCIAL MEDIA</li>
+          </ul>
+          <ul className="info">
+            <li>Home</li>
+            <br /> <br />
+            <li>About-Mee</li>
+            <br /> <br />
+            <li>contact</li>
+          </ul>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14481.397481748192!2d67.25764153255341!3d24.
+            851914516255057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3317d179c7ea5%3A0xe7de0f37cad8a69b!
+            2sShah%20Latif%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730819600572!
+            5m2!1sen!2s"
+            width="600"
+            height="450"
+            className="map"
+          ></iframe>
+          <p className="contact"> 03040027763</p>
+          <a href="mailto:ersarani955@gmail.con" target="_blank">
+            <p className="footer-email"> ersarani955@gmail.com</p>
+          </a>
+          <FaMapMarkerAlt className="map-vec" />
+          <FaPhone className="phone-vec" />
+          <MdMarkEmailUnread className="email-vec" />
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.facebook.com/share/3iERBqeaz4iYtzT4/"
             target="_blank"
-            rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <FaFacebookSquare className="face-vec" />
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/ersa-rani-b4b4842b6/"
             target="_blank"
-            rel="noopener noreferrer"
           >
-            Read our docs
+            <SiLinkedin className="link-vec" />
+          </a>
+          <a
+            href="https://www.instagram.com/ersa_rani?igsh=bHoydmptOXMyOGM0"
+            target="_blank"
+          >
+            <FaInstagramSquare className="insta-vec" />
+          </a>
+          <a href="https://github.com/ersa-rani" target="_blank">
+            <FaGithub className="git-vec" />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div />
     </div>
   );
 }
